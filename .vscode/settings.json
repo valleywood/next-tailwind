@@ -1,0 +1,38 @@
+{
+    "files.autoSave": "onFocusChange",
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    // Enable per-language
+    "[scss]": {
+        "editor.formatOnSave": false
+    },
+    "eslint.format.enable": true,
+    "prettier.trailingComma": "none",
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+      },
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "files.exclude": {
+        "**/node_modules/*/**": true
+    },
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/*.code-search": true,
+        "**/dist/**": true,
+        "**/.next/**": true
+    },
+    "search.useIgnoreFiles": false,
+    "explorer.excludeGitIgnore": false,
+    "workbench.colorCustomizations": {
+        "gitDecoration.ignoredResourceForeground": "#ccc"
+    },
+    "git.repositoryScanMaxDepth": 3
+}

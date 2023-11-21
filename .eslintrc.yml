@@ -1,0 +1,26 @@
+---
+extends:
+  - '@varner-as/eslint-config'
+  - '@varner-as/eslint-config/react'
+  - '@varner-as/eslint-config/test'
+  - '@varner-as/eslint-config/typescript'
+  - 'next/core-web-vitals'
+# Rules specific to this project
+rules: # See https://eslint.org/docs/rules
+  no-restricted-imports:
+    - 'error'
+    - patterns:
+        - group: ["@mui/*/*/*", 
+                  "!@mui/material/styles/createPalette", 
+                  "!@mui/material/styles/createTypography", 
+                  "!@mui/material/test-utils/*", 
+                  "!@mui/material/styles/components"
+          ]
+          message: Do not use Material UI internals
+# Since storybook isn't included in the regular tsconfig.json, we need to add it here. 
+# Because type checking is enabled, we need to add the tsconfig.eslint.json file as well
+parserOptions: 
+  project: 
+    - './tsconfig.json' # Required to have rules that rely on Types.
+    # - './tsconfig.eslint.json' # Required to have rules that rely on Types.
+    # - './tsconfig.integration.json' # Required to have rules that rely on Types.
